@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riwaj Lamichhane</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Header -->
+    <header id="main-navbar" class="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 bg-white/90 backdrop-blur-lg border border-gray-200 rounded-2xl shadow-2xl px-16 py-4 w-[100vw] max-w-[1800px] flex items-center justify-between transition-all duration-700 ease-in-out">
+        <a href="#home">
+            <div class="flex items-center gap-2">
+                <span class="text-2xl font-bold text-blue-600">Riwaj</span>
+                <span class="text-2xl font-bold text-green-600">Lamichhane</span>
+            </div>
+        </a>
+        <nav class="hidden md:flex items-center space-x-8" id="main-nav-links">
+            <a href="#home" class="nav-link text-gray-700 hover:text-blue-600 transition-colors relative flex items-center gap-2" data-section="home">
+                <i class="fas fa-home"></i> Home
+            </a>
+            <a href="#about" class="nav-link text-gray-700 hover:text-blue-600 transition-colors relative flex items-center gap-2" data-section="about">
+                <i class="fas fa-user"></i> About
+            </a>
+            <a href="#skills" class="nav-link text-gray-700 hover:text-blue-600 transition-colors relative flex items-center gap-2" data-section="skills">
+                <i class="fas fa-code"></i> Skills
+            </a>
+            <a href="#projects" class="nav-link text-gray-700 hover:text-blue-600 transition-colors relative flex items-center gap-2" data-section="projects">
+                <i class="fas fa-briefcase"></i> Projects
+            </a>
+            <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 transition-colors relative flex items-center gap-2" data-section="contact">
+                <i class="fas fa-envelope"></i> Contact
+            </a>
+        </nav>
+        <button class="md:hidden text-gray-700 hover:text-blue-600" id="hamburger-btn">
+            <i class="fas fa-bars text-xl"></i>
+        </button>
+    </header>
+    <nav id="mobile-nav" class="fixed top-0 left-0 w-full h-full bg-white/95 z-40 flex flex-col items-center justify-center space-y-8 text-2xl font-semibold text-blue-700 hidden">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <button id="close-mobile-nav" class="mt-8 text-gray-700 hover:text-blue-600 text-3xl"><i class="fas fa-times"></i></button>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="pt-40 pb-32 px-6 min-h-screen flex items-center  ">
+            <div class="max-w-7xl mx-auto w-full">
+                <div class="grid lg:grid-cols-2 gap-16 items-center ">
+                    <!-- Left Content -->
+                    <div class="text-center lg:text-left">
+                        <div class="mb-12">
+                            <h1 class="text-6xl md:text-8xl font-bold mb-8 leading-tight">
+                                <span class="text-blue-600">Hello, I'm</span><br>
+                                <span class="text-gray-900">Riwaj Lamichhane</span>
+                            </h1>
+                            <p class="text-2xl md:text-3xl text-gray-600 max-w-4xl mx-auto lg:mx-0 leading-relaxed">
+                                A guy who is a good guy. <br>
+                                A guy who has acquaintances in something.
+                            </p>
+                        </div>
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6">
+                            <a href="#projects" class="bg-blue-600 text-white px-10 py-4 rounded-xl hover:bg-blue-700 transition-all duration-300 text-lg font-semibold hover:scale-105 hover:shadow-2xl">
+                                View My Work
+                            </a>
+                            <a href="#contact" class="border-2 border-blue-600 text-blue-600 px-10 py-4 rounded-xl hover:bg-blue-600 hover:text-white transition-all duration-300 text-lg font-semibold hover:scale-105 hover:shadow-2xl">
+                                Get In Touch
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Right Photo Section -->
+                    <div class="flex justify-center lg:justify-end">
+                        <div class="relative">
+                            <!-- Main Photo Container -->
+                            <div class="w-[28rem] h-[28rem] bg-gradient-to-br from-blue-500 to-blue-600 rounded-full p-3 shadow-2xl">
+                                <div class="w-full h-full bg-gray-200 rounded-full overflow-hidden flex items-center justify-center">
+                                    <!-- Replace with your actual photo -->
+                                    <div class="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+                                        
+                                        <span class="text-blue-600 text-base mt-8"><img src="me.png" alt="" class="w-111 h-111 object-cover rounded-full" /></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Floating Elements Around Photo -->
+                            <div class="absolute -top-6 -left-6 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center animate-bounce">
+                                <i class="fas fa-star text-yellow-800 text-lg"></i>
+                            </div>
+                            <div class="absolute -bottom-6 -right-6 w-10 h-10 bg-green-400 rounded-full flex items-center justify-center animate-pulse">
+                                <i class="fas fa-code text-green-800 text-sm"></i>
+                            </div>
+                            <div class="absolute top-1/2 -left-12 w-6 h-6 bg-purple-400 rounded-full animate-ping"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 px-6 bg-gradient-to-br from-blue-50 via-purple-50 to-white">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">About Me</h2>
+                    <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6 text-blue-600">Riwaj Lamichhane</h3>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                            I'm a Grade 12 student with some intrest in technology and innovation.
+                        </p>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                            Going through Data Science and AI/ML.
+                        </p>
+                        <div class="flex items-center space-x-4">
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-map-marker-alt text-blue-600"></i>
+                                <span class="text-gray-700">Nepal</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-graduation-cap text-blue-600"></i>
+                                <span class="text-gray-700">Grade 12</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="bg-gradient-to-br from-cyan-500 to-gray-600 rounded-2xl p-8 text-white text-center">
+                            <i class="fas fa-brain text-6xl mb-4"></i>
+                            <h4 class="text-xl font-bold mb-2"> Enthusiast about something</h4>
+                            <p class="text-red-100">Passionate about something</p>
+                        </div>
+                        <div class="absolute -top-4 -right-4 bg-yellow-400 rounded-full p-3">
+                            <i class="fas fa-lightbulb text-yellow-800"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 px-6 bg-gradient-to-br from-blue-50 via-purple-50 to-white">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-5xl font-extrabold mb-4 text-gray-900">Skills & Expertise</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-2"></div>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Web Development Card -->
+                    <div class="group bg-white rounded-3xl shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300 p-8 flex flex-col items-center text-center border-t-4 border-blue-400">
+                        <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mb-6 shadow-lg group-hover:shadow-2xl transition-all duration-500">
+                            <i class="fas fa-globe text-white text-4xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-blue-700">Web Development</h3>
+                        <div class="space-y-3">
+                            <div>
+                                <h4 class="font-semibold text-blue-600 mb-1">Frontend</h4>
+                                <p class="text-gray-600 text-sm">HTML5, CSS3, JavaScript, React.js</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-green-600 mb-1">Backend</h4>
+                                <p class="text-gray-600 text-sm">Python (Flask), MySQL, REST APIs</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI/ML Card -->
+                    <div class="group bg-white rounded-3xl shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300 p-8 flex flex-col items-center text-center border-t-4 border-purple-400">
+                        <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mb-6 shadow-lg group-hover:shadow-2xl transition-all duration-500">
+                            <i class="fas fa-robot text-white text-4xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-purple-700">Data Science</h3>
+                        <p class="text-gray-600">.......................</p>
+                    </div>
+                    <!-- Tools & DevOps Card -->
+                    <div class="group bg-white rounded-3xl shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300 p-8 flex flex-col items-center text-center border-t-4 border-orange-400">
+                        <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mb-6 shadow-lg group-hover:shadow-2xl transition-all duration-500">
+                            <i class="fas fa-tools text-white text-4xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-orange-700">Tools & DevOps</h3>
+                        <p class="text-gray-600">Git, Jupyter, Docker, VS Code, CI/CD</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 px-6 bg-gradient-to-br from-blue-50 via-purple-50 to-white">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-5xl font-extrabold mb-4 text-gray-900">Featured Projects</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-2"></div>
+                </div>
+                <div class="grid lg:grid-cols-3 gap-10">
+                    <!-- Project Card 1 -->
+                    <a href="#" class="group bg-white rounded-3xl shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300 flex flex-col overflow-hidden border-t-4 border-blue-400 hover:bg-blue-50">
+                        <div class="h-56 bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+                            <i class="fas fa-book text-white text-6xl"></i>
+                        </div>
+                        <div class="p-8 flex-1 flex flex-col justify-between">
+                            <h3 class="text-2xl font-bold mb-2 text-blue-700 group-hover:underline">Class 10 Science Guide App</h3>
+                            <p class="text-gray-700 mb-4">A comprehensive mobile application providing study materials and guides for Class 10 Science students</p>
+                            <div class="flex flex-wrap gap-2 mt-auto">
+                                <span class="bg-blue-200 text-blue-800 px-4 py-1 rounded-full text-sm">Flutter</span>
+                                <span class="bg-blue-200 text-blue-800 px-4 py-1 rounded-full text-sm">Dart</span>
+                                <span class="bg-red-200 text-blue-800 px-4 py-1 rounded-full text-sm">Education</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Project Card 2 -->
+                    <a href="#" class="group bg-white rounded-3xl shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300 flex flex-col overflow-hidden border-t-4 border-green-400 hover:bg-green-50">
+                        <div class="h-56 bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center">
+                            <i class="fas fa-graduation-cap text-white text-6xl"></i>
+                        </div>
+                        <div class="p-8 flex-1 flex flex-col justify-between">
+                            <h3 class="text-2xl font-bold mb-2 text-green-700 group-hover:underline">Class 12 English Guide App</h3>
+                            <p class="text-gray-700 mb-4">Educational mobile app designed to help Class 12 students with English literature and grammar</p>
+                            <div class="flex flex-wrap gap-2 mt-auto">
+                                <span class="bg-green-200 text-green-800 px-4 py-1 rounded-full text-sm">Flutter</span>
+                                <span class="bg-green-200 text-green-800 px-4 py-1 rounded-full text-sm">Dart</span>
+                                <span class="bg-red-200 text-green-800 px-4 py-1 rounded-full text-sm">Education</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Project Card 3 -->
+                    <a href="#" class="group bg-white rounded-3xl shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300 flex flex-col overflow-hidden border-t-4 border-purple-400 hover:bg-purple-50">
+                        <div class="h-56 bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
+                            <i class="fas fa-cloud-sun text-white text-6xl"></i>
+                        </div>
+                        <div class="p-8 flex-1 flex flex-col justify-between">
+                            <h3 class="text-2xl font-bold mb-2 text-purple-700 group-hover:underline">Weather App</h3>
+                            <p class="text-gray-700 mb-4">Real-time weather application that fetches current weather data using external APIs</p>
+                            <div class="flex flex-wrap gap-2 mt-auto">
+                                <span class="bg-purple-200 text-purple-800 px-4 py-1 rounded-full text-sm">JavaScript</span>
+                                <span class="bg-purple-200 text-purple-800 px-4 py-1 rounded-full text-sm">APIs</span>
+                                <span class="bg-red-200 text-purple-800 px-4 py-1 rounded-full text-sm">Web</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 px-6 bg-gray-50">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-5xl font-extrabold mb-4 text-gray-900">Get In Touch</h2>
+                    <p class="text-lg text-gray-700 mb-4">I'm always open to discussing new opportunities, creative projects, or just having a friendly chat</p>
+                    <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-2"></div>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
+                    <!-- Left Side: Info -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-900">Let's start a conversation</h3>
+                        <p class="text-lg text-gray-700 mb-8">    <p>
+                        <div class="space-y-6 mb-8">
+                            <div class="flex items-center gap-4 bg-white rounded-xl shadow p-5">
+                                <div class="bg-blue-100 p-3 rounded-full">
+                                    <i class="fas fa-envelope text-blue-500 text-2xl"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Email</div>
+                                    <div class="text-gray-700">lamichhane.riwaj000@gmail.com</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 bg-white rounded-xl shadow p-5">
+                                <div class="bg-green-100 p-3 rounded-full">
+                                    <i class="fas fa-phone text-green-500 text-2xl"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Phone</div>
+                                    <div class="text-gray-700">+977 9769210739</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 bg-white rounded-xl shadow p-5">
+                                <div class="bg-purple-100 p-3 rounded-full">
+                                    <i class="fas fa-map-marker-alt text-purple-500 text-2xl"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Location</div>
+                                    <div class="text-gray-700">Pokhara,Nepal</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 mt-4">
+                            <a href="https://github.com/lamichhaneriwaj" target="_blank" class="bg-white rounded-lg shadow p-3 hover:bg-blue-50 transition-colors"><i class="fab fa-github text-2xl text-gray-700"></i></a>
+                            <a href="https://www.linkedin.com/in/riwaj-lamichhane-2aa879352/" class="bg-white rounded-lg shadow p-3 hover:bg-blue-50 transition-colors"><i class="fab fa-linkedin text-2xl text-gray-700"></i></a>
+                            <a href="https://www.instagram.com/riwaj.216/" class="bg-white rounded-lg shadow p-3 hover:bg-blue-50 transition-colors"><i class="fab fa-instagram text-2xl text-gray-700"></i></a>
+                            <a href="https://www.facebook.com/riwaz.lamichhane.444" class="bg-white rounded-lg shadow p-3 hover:bg-blue-50 transition-colors"><i class="fab fa-facebook text-2xl text-gray-700"></i></a>
+                        </div>
+                    </div>
+                    <!-- Right Side: Form -->
+                    <div>
+                        <form class="bg-white rounded-2xl shadow-xl p-8 space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name *</label>
+                                    <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Your name" required>
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                                    <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="your.email@example.com" required>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject *</label>
+                                <input type="text" id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="What's this about?" required>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Tell me about your project or just say hello!" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-cyan-900 text-white py-3 rounded-lg font-semibold text-lg flex items-center justify-center gap-2 hover:scale-105 transition-transform">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="mb-6">
+                <div class="text-2xl font-bold text-blue-400 mb-2">Riwaj Lamichhane</div>
+                <p class="text-gray-400">A guy who is ardent about something and is a good guy.</p>
+            </div>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">
+                    <i class="fab fa-linkedin text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">
+                    <i class="fab fa-twitter text-xl"></i>
+                </a>
+            </div>
+            <div class="border-t border-gray-800 pt-6">
+                <p class="text-gray-400">&copy; 2069 Riwaj Lamichhane. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Navbar transparency and position on scroll
+  window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('main-navbar');
+    navbar.style.transition = 'all 0.7s cubic-bezier(0.77,0,0.175,1)';
+    if (window.scrollY > 40) {
+      navbar.classList.add('bg-white/40');
+      navbar.classList.remove('bg-white/90');
+      navbar.style.top = '0px';
+      navbar.style.left = '0';
+      navbar.style.transform = 'none';
+      navbar.style.borderRadius = '0';
+      navbar.style.paddingLeft = '15px';
+      navbar.style.paddingRight = '15px';
+      navbar.style.width = '100vw';
+      navbar.style.maxWidth = '100vw';
+      navbar.style.boxShadow = '0 2px 16px rgba(0,0,0,0.08)';
+    } else {
+      navbar.classList.add('bg-white/90');
+      navbar.classList.remove('bg-white/40');
+      navbar.style.top = '1.5rem'; // More top padding
+      navbar.style.left = '50%';
+      navbar.style.transform = 'translateX(-50%)';
+      navbar.style.borderRadius = '1rem';
+      navbar.style.paddingLeft = '';
+      navbar.style.paddingRight = '';
+      navbar.style.width = '100vw';
+      navbar.style.maxWidth = '1800px';
+      navbar.style.boxShadow = '';
+    }
+  });
+
+  // Hamburger menu open/close logic
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const mobileNav = document.getElementById('mobile-nav');
+  const closeMobileNav = document.getElementById('close-mobile-nav');
+
+  if (hamburgerBtn && mobileNav && closeMobileNav) {
+    hamburgerBtn.addEventListener('click', function() {
+      mobileNav.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    });
+    closeMobileNav.addEventListener('click', function() {
+      mobileNav.classList.add('hidden');
+      document.body.style.overflow = '';
+    });
+    mobileNav.querySelectorAll('a.nav-link').forEach(function(link) {
+      link.addEventListener('click', function() {
+        mobileNav.classList.add('hidden');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+});
+</script>
+</body>
+</html>
