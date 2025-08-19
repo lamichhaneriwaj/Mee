@@ -4,7 +4,131 @@ document.addEventListener('DOMContentLoaded', function() {
     initFormHandling();
     initSkillCardsAnimation();
     initActiveNavigation();
+    initThemeToggle();
 });
+// Theme toggle logic
+function initThemeToggle() {
+    const toggleBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+    let isDark = false;
+
+    function setTheme(dark) {
+        isDark = dark;
+        if (dark) {
+            body.classList.add('dark-theme');
+            body.classList.remove('bg-gray-50', 'text-gray-900');
+            body.classList.add('bg-gray-900', 'text-gray-100');
+            document.querySelectorAll('.bg-white, .bg-white\/90, .bg-white\/95').forEach(el => {
+                el.classList.remove('bg-white', 'bg-white/90', 'bg-white/95');
+                el.classList.add('bg-gray-900');
+            });
+            document.querySelectorAll('.bg-gray-50').forEach(el => {
+                el.classList.remove('bg-gray-50');
+                el.classList.add('bg-gray-900');
+            });
+            document.querySelectorAll('.bg-gray-200').forEach(el => {
+                el.classList.remove('bg-gray-200');
+                el.classList.add('bg-gray-800');
+            });
+            document.querySelectorAll('.bg-blue-600, .bg-blue-500, .bg-blue-100, .bg-blue-200').forEach(el => {
+                el.classList.remove('bg-blue-600', 'bg-blue-500', 'bg-blue-100', 'bg-blue-200');
+                el.classList.add('bg-gray-800');
+            });
+            document.querySelectorAll('.text-gray-700').forEach(el => {
+                el.classList.remove('text-gray-700');
+                el.classList.add('text-gray-200');
+            });
+            document.querySelectorAll('.text-gray-900').forEach(el => {
+                el.classList.remove('text-gray-900');
+                el.classList.add('text-gray-100');
+            });
+            document.querySelectorAll('.text-gray-600').forEach(el => {
+                el.classList.remove('text-gray-600');
+                el.classList.add('text-gray-400');
+            });
+            document.querySelectorAll('.border-gray-200, .border-gray-300').forEach(el => {
+                el.classList.remove('border-gray-200', 'border-gray-300');
+                el.classList.add('border-gray-700');
+            });
+            document.querySelectorAll('.text-blue-600').forEach(el => {
+                el.classList.remove('text-blue-600');
+                el.classList.add('text-blue-300');
+            });
+            document.querySelectorAll('.text-green-600').forEach(el => {
+                el.classList.remove('text-green-600');
+                el.classList.add('text-green-300');
+            });
+            document.querySelectorAll('.bg-yellow-400').forEach(el => {
+                el.classList.remove('bg-yellow-400');
+                el.classList.add('bg-yellow-700');
+            });
+            document.querySelectorAll('.bg-green-400').forEach(el => {
+                el.classList.remove('bg-green-400');
+                el.classList.add('bg-green-700');
+            });
+            document.querySelectorAll('.bg-purple-400').forEach(el => {
+                el.classList.remove('bg-purple-400');
+                el.classList.add('bg-purple-900');
+            });
+            toggleBtn.textContent = '☀️ Light Mode';
+        } else {
+            body.classList.remove('dark-theme');
+            body.classList.remove('bg-gray-900', 'text-gray-100');
+            body.classList.add('bg-gray-50', 'text-gray-900');
+            document.querySelectorAll('.bg-gray-900').forEach(el => {
+                el.classList.remove('bg-gray-900');
+                el.classList.add('bg-white');
+            });
+            document.querySelectorAll('.bg-gray-800').forEach(el => {
+                el.classList.remove('bg-gray-800');
+                el.classList.add('bg-gray-200');
+            });
+            document.querySelectorAll('.text-gray-200').forEach(el => {
+                el.classList.remove('text-gray-200');
+                el.classList.add('text-gray-700');
+            });
+            document.querySelectorAll('.text-gray-100').forEach(el => {
+                el.classList.remove('text-gray-100');
+                el.classList.add('text-gray-900');
+            });
+            document.querySelectorAll('.text-gray-400').forEach(el => {
+                el.classList.remove('text-gray-400');
+                el.classList.add('text-gray-600');
+            });
+            document.querySelectorAll('.border-gray-700').forEach(el => {
+                el.classList.remove('border-gray-700');
+                el.classList.add('border-gray-200');
+            });
+            document.querySelectorAll('.text-blue-300').forEach(el => {
+                el.classList.remove('text-blue-300');
+                el.classList.add('text-blue-600');
+            });
+            document.querySelectorAll('.text-green-300').forEach(el => {
+                el.classList.remove('text-green-300');
+                el.classList.add('text-green-600');
+            });
+            document.querySelectorAll('.bg-yellow-700').forEach(el => {
+                el.classList.remove('bg-yellow-700');
+                el.classList.add('bg-yellow-400');
+            });
+            document.querySelectorAll('.bg-green-700').forEach(el => {
+                el.classList.remove('bg-green-700');
+                el.classList.add('bg-green-400');
+            });
+            document.querySelectorAll('.bg-purple-900').forEach(el => {
+                el.classList.remove('bg-purple-900');
+                el.classList.add('bg-purple-400');
+            });
+            toggleBtn.textContent = '🌙 Dark Mode';
+        }
+    }
+
+    setTheme(false); // Default to light
+
+    toggleBtn.addEventListener('click', function() {
+        setTheme(!isDark);
+    });
+}
 
 // Smooth scrolling for navigation links
 function initSmoothScrolling() {

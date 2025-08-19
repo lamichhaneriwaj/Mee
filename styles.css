@@ -808,3 +808,6 @@ nav a:hover::after {
 .skip-link:focus {
     top: 6px;
 }
+.skip-link:active {
+    top: 0;
+}
